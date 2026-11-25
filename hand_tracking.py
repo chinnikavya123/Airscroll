@@ -1,6 +1,7 @@
 
 import cv2
 import mediapipe as mp
+import math
 
 
 class HandTracker:
@@ -45,6 +46,27 @@ class HandTracker:
             y = int(index_tip.y * height)
 
             return x, y
+
+        return None
+
+    def get_pinch_distance(self, results):
+        if results and results.multi_hand_landmarks:
+            hand_landmarks = results.multi_hand_landmarks[0]
+
+            thumb_tip = hand_landmarks.landmark[
+                self.mp_hands.HandLandmark.THUMB_TIP
+            ]
+
+            index_tip = hand_landmarks.landmark[
+                self.mp_hands.HandLandmark.INDEX_FINGER_TIP
+            ]
+
+            distance = math.hypot(
+                thumb_tip.x - index_tip.x,
+                thumb_tip.y - index_tip.y
+            )
+
+            return distance
 
         return None
 
