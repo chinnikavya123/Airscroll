@@ -13,14 +13,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv&logoColor=white" alt="OpenCV" />
-  <img src="https://img.shields.io/badge/MediaPipe-Hand%20Tracking-orange" alt="MediaPipe" />
-  <img src="https://img.shields.io/badge/Platform-Windows-0078D6?logo=windows&logoColor=white" alt="Windows" />
-  <img src="https://img.shields.io/badge/Status-Active-success" alt="Project Status" />
-</p>
-
-<p align="center">
   <a href="https://github.com/chinnikavya123/Airscroll">GitHub Repository</a>
 </p>
 
