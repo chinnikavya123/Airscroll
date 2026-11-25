@@ -1,0 +1,19 @@
+@"
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Build files
+build/
+dist/
+
+# IDE settings
+.vscode/
+
+# Environment variables
+.env
+"@ | Set-Content .gitignore
