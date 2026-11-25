@@ -1,103 +1,70 @@
-# 🖐️ AirScroll
+# 🖐️ AirScroll – Gesture-Based Touch-Free Scrolling Application
 
-<h1 align="center">AirScroll</h1>
-
-<p align="center">
-  <strong>Your hands. Your gestures. Your scrolling experience.</strong>
-</p>
-
-<p align="center">
-  A touch-free scrolling desktop application powered by Computer Vision.
-  <br />
-  Control websites and PDF documents using nothing but your hand gestures!
-</p>
-
-<p align="center">
-  <a href="https://github.com/chinnikavya123/Airscroll">GitHub Repository</a>
-</p>
+**Control your scrolling with simple hand gestures. Browse smarter. Interact without touching your mouse. 🚀**
 
 ---
 
-## 🚀 What is AirScroll?
+## 📌 Table of Contents
 
-Imagine scrolling through a website or reading a PDF without touching your mouse or keyboard.
+1. 🌟 About the Project
+2. ✨ Features
+3. 🖐️ Gesture Controls
+4. 🛠️ Tech Stack
+5. 📊 Application Modules
+6. 🏗️ Project Architecture
+7. ⚙️ Getting Started
+8. 📖 How to Use
+9. 📂 Project Structure
+10. 🔍 Troubleshooting
+11. 🎯 Future Enhancements
+12. 👩‍💻 Project Links & Owner
 
-That's exactly what **AirScroll** makes possible!
+---
 
-AirScroll is a Python-based desktop application that uses your webcam and computer vision to recognize hand gestures and convert them into scrolling actions.
+## 🌟 About the Project
 
-Simply move your index finger to scroll, and use a pinch gesture to pause or resume. It provides a convenient, touch-free way to interact with digital content.
+**AirScroll** is a Python-based desktop application that enables touch-free scrolling using hand gestures and computer vision.
 
-## ✨ Key Features
+Imagine browsing websites or reading PDF documents without repeatedly touching your mouse or keyboard. AirScroll makes this possible by using your webcam to detect and track hand movements in real time.
 
-| Feature | Description |
+With simple gestures, users can scroll up and down using their index finger and pause or resume scrolling using a pinch gesture.
+
+The application combines **OpenCV, MediaPipe, and PyAutoGUI** to transform natural hand movements into scrolling actions, providing a convenient and interactive browsing experience.
+
+### 💡 Project Objective
+
+The main objective of AirScroll is to make digital interaction more convenient and accessible by introducing a simple gesture-based scrolling system.
+
+---
+
+## ✨ Features
+
+- 🖐️ **Gesture-Based Scrolling:** Scroll up and down using index-finger movements.
+- 🤏 **Pinch Detection:** Pause or resume scrolling using a thumb-and-index-finger pinch gesture.
+- ⚡ **Adjustable Scroll Speed:** Customize scrolling speed according to your preference.
+- 🌐 **Website Launcher:** Enter a website URL and open it directly in your default browser.
+- 📄 **PDF Launcher:** Select and open PDF documents in your default PDF reader.
+- 👁️ **Live Hand Tracking:** Visualize hand landmarks and monitor real-time tracking information.
+- 📊 **Interactive Dashboard:** Navigate through dedicated sections for overview, hand tracking, scroll controls, and settings.
+- 🎥 **Camera Controls:** Start and stop webcam tracking whenever required.
+- 📈 **Scroll Activity Monitoring:** Monitor scrolling activity and direction.
+
+---
+
+## 🖐️ Gesture Controls
+
+AirScroll recognizes simple hand movements and converts them into scrolling actions.
+
+| Gesture | Action |
 |---|---|
-| 🖐️ Gesture-Based Scrolling | Scroll up and down using index-finger movements |
-| 🤏 Pinch Detection | Pause or resume scrolling using a pinch gesture |
-| ⚡ Adjustable Speed | Customize scrolling speed to match your preference |
-| 🌐 Website Launcher | Enter a URL and open websites directly |
-| 📄 PDF Launcher | Browse and open PDF documents |
-| 👁️ Live Hand Tracking | View real-time hand landmarks and tracking information |
-| 📊 Interactive Dashboard | Explore an organized interface with dedicated sections |
-| 🎥 Camera Controls | Start and stop camera tracking whenever needed |
-
-## 🖐️ How Gesture Controls Work
-
-AirScroll translates simple hand movements into scrolling actions.
-
-| Hand Gesture | Action |
-|---|---|
-| ☝️ Index finger | Activate gesture-based scrolling |
-| ⬆️ Move finger upward | Scroll up |
-| ⬇️ Move finger downward | Scroll down |
+| ☝️ Raise index finger | Activate gesture-based scrolling |
+| ⬆️ Move index finger upward | Scroll up |
+| ⬇️ Move index finger downward | Scroll down |
 | 🤏 Pinch thumb and index finger | Pause or resume scrolling |
 
-**Tip:** Adjust the scroll speed from the Scroll Controls section to find the movement that feels most comfortable.
+**Tip:** Adjust the scrolling speed from the Scroll Controls section for a comfortable experience.
 
-## 🖥️ Application Dashboard
-
-AirScroll includes four main sections:
-
-- **Overview:** Launch websites and PDF documents and access the main controls.
-- **Hand Tracking:** View the camera preview, detected landmarks, hand information, and gesture metrics.
-- **Scroll Controls:** Adjust scrolling speed and monitor scrolling activity.
-- **Settings:** Access camera settings, usage instructions, and reset the scroll counter.
-
-## ⚙️ How It Works
-
-AirScroll combines computer vision and desktop automation to make gesture-based scrolling possible.
-
-```text
-       Webcam Input
-            │
-            ▼
-    Hand Detection
-       (MediaPipe)
-            │
-            ▼
-   Landmark Tracking
-       (OpenCV)
-            │
-            ▼
-   Gesture Recognition
-            │
-       ┌────┴────┐
-       ▼         ▼
-   Finger      Pinch
-  Movement    Detection
-       │         │
-       ▼         ▼
-  Scroll Up/   Pause /
-   Scroll     Resume
-    Down
-       │
-       ▼
-  PyAutoGUI
-       │
-       ▼
-  Touch-Free
-    Scrolling
-```
+---
 
 ## 🛠️ Tech Stack
 
@@ -111,7 +78,75 @@ AirScroll combines computer vision and desktop automation to make gesture-based 
 | CustomTkinter | Modern desktop user interface |
 | Pillow | Image processing and display |
 
-## 📥 Installation and Setup
+---
+
+## 📊 Application Modules
+
+AirScroll provides an organized dashboard with four main sections.
+
+### 1. 🏠 Overview
+- Launch websites using their URLs.
+- Browse and open PDF documents.
+- Access the main camera controls.
+- View the application's current status.
+
+### 2. ✋ Hand Tracking
+- View the live webcam preview.
+- Track detected hand landmarks.
+- Monitor hand detection information.
+- View fingertip coordinates and pinch distance.
+- Understand the supported gestures.
+
+### 3. ⚡ Scroll Controls
+- Adjust scrolling speed using the speed slider.
+- Monitor scrolling activity.
+- View the current scrolling direction.
+
+### 4. ⚙️ Settings
+- Configure the camera index.
+- Access usage instructions.
+- Reset the scroll activity counter.
+
+---
+
+## 🏗️ Project Architecture
+
+AirScroll follows a computer vision-based workflow to convert hand movements into scrolling actions.
+
+```text
+             Webcam Input
+                  |
+                  ▼
+          Hand Detection
+             MediaPipe
+                  |
+                  ▼
+          Landmark Tracking
+               OpenCV
+                  |
+                  ▼
+          Gesture Recognition
+                  |
+             ┌────┴────┐
+             ▼         ▼
+       Finger Movement  Pinch Detection
+             |         |
+             ▼         ▼
+        Scroll Up/    Pause / Resume
+         Scroll Down
+             |
+             ▼
+          PyAutoGUI
+             |
+             ▼
+       Touch-Free Scrolling
+```
+
+---
+
+## ⚙️ Getting Started
+
+Follow these instructions to set up and run AirScroll on your local machine.
 
 ### Prerequisites
 
@@ -120,55 +155,63 @@ AirScroll combines computer vision and desktop automation to make gesture-based 
 - A working webcam
 - Git
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/chinnikavya123/Airscroll.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
 cd Airscroll
 ```
 
-### 2. Create a virtual environment
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
 ```
 
-### 3. Activate the environment
+### 4. Activate the Virtual Environment
 
 ```powershell
 .venv\Scripts\Activate.ps1
 ```
 
-### 4. Install dependencies
+### 5. Install Dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-### 5. Launch AirScroll
+### 6. Run the Application
 
 ```bash
 python dashboard.py
 ```
 
-That's it! Your AirScroll desktop application should now launch.
+That's it! AirScroll should now launch on your desktop.
 
-## 📖 Getting Started
+---
 
-Follow these steps to use AirScroll:
+## 📖 How to Use
 
-1. Launch the application.
-2. Open the Overview section.
+1. Launch AirScroll.
+2. Navigate to the Overview section.
 3. Enter a website URL or select a PDF document.
-4. Open the content in your default browser or PDF reader.
-5. Position your mouse pointer over the content you want to scroll.
-6. Click **Start Camera**.
-7. Show your hand to the webcam and use the supported gestures.
-8. Adjust scrolling speed whenever needed.
+4. Open the selected content.
+5. Position your mouse pointer over the webpage or PDF.
+6. Click **Start Camera** to begin hand tracking.
+7. Show your hand in front of the webcam.
+8. Use your index finger to scroll up and down.
 9. Use the pinch gesture to pause or resume scrolling.
-10. Click **Stop Camera** when you're finished.
+10. Adjust the scrolling speed whenever needed.
+11. Click **Stop Camera** when finished.
 
-> **Important:** Websites and PDFs open in external applications, not inside AirScroll. The application sends scrolling actions to the window beneath your mouse pointer. Keep your pointer over the webpage or PDF while using hand gestures.
+**Important:** Websites and PDF documents open in external applications, not inside AirScroll. The application sends scrolling actions to the window beneath your mouse pointer. Keep your pointer over the webpage or PDF while using gestures.
+
+---
 
 ## 📂 Project Structure
 
@@ -183,36 +226,48 @@ AirScroll/
 ├── scroll_test.py        # Scrolling testing utility
 ├── pinch_test.py         # Pinch detection testing utility
 │
-├── requirements.txt      # Python dependencies
+├── requirements.txt      # Project dependencies
 ├── .gitignore
 └── README.md
 ```
 
+---
+
 ## 🔍 Troubleshooting
 
 <details>
-<summary><strong>Camera is not detected</strong></summary>
+<summary><strong>📷 Camera is not detected</strong></summary>
 
-- Check whether your webcam is connected.
-- Close other applications that may be using the camera.
+- Check whether your webcam is connected and working.
+- Close other applications that may be using the webcam.
 - Restart AirScroll and try again.
 
 </details>
 
 <details>
-<summary><strong>Scrolling is not working</strong></summary>
+<summary><strong>🖐️ Hand gestures are not detected correctly</strong></summary>
 
-- Make sure your mouse pointer is over the webpage or PDF.
-- Check whether your hand is detected correctly.
-- Ensure the camera is running.
-- Adjust the scrolling speed.
+- Keep your hand within the webcam's field of view.
+- Ensure sufficient lighting.
+- Avoid covering your fingers.
+- Position your hand clearly in front of the camera.
 
 </details>
 
 <details>
-<summary><strong>Dependencies are missing</strong></summary>
+<summary><strong>⬇️ Scrolling is not working</strong></summary>
 
-Activate your virtual environment and run:
+- Make sure your mouse pointer is positioned over the webpage or PDF.
+- Check whether the webcam is running.
+- Ensure your hand is being detected.
+- Adjust the scrolling speed if necessary.
+
+</details>
+
+<details>
+<summary><strong>📦 Dependencies are missing</strong></summary>
+
+Activate your virtual environment and execute:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -220,28 +275,42 @@ python -m pip install -r requirements.txt
 
 </details>
 
-## 🔮 Future Enhancements
+---
 
-Here are some ideas planned for future development:
+## 🎯 Future Enhancements
 
-- 🌐 Chrome browser extension.
-- ✋ More customizable hand gestures.
-- ♿ Additional accessibility-focused controls.
-- 🎯 Further improvements to gesture recognition.
-- ⚡ Enhanced scrolling responsiveness.
+Some improvements planned for future versions:
 
-## 👩‍💻 Author
+- 🌐 Chrome browser extension for easier browser integration.
+- ✋ Additional customizable hand gestures.
+- ♿ More accessibility-focused controls.
+- 🎯 Further improvements to gesture recognition accuracy.
+- ⚡ Enhanced scrolling responsiveness and interaction.
+
+---
+
+## 👩‍💻 Project Links & Owner
+
+**🌐 Project:** AirScroll – Gesture-Based Touch-Free Scrolling Application
+
+**📂 GitHub Repository:** [AirScroll](https://github.com/chinnikavya123/Airscroll)
+
+**👩‍💻 GitHub Profile:** [@chinnikavya123](https://github.com/chinnikavya123)
+
+---
 
 <p align="center">
-  <strong>Chinni Kavya Sri</strong>
-  <br />
-  <a href="https://github.com/chinnikavya123">GitHub Profile</a>
+  ⭐ If you find AirScroll interesting, consider giving this repository a star!
+</p>
+
+<p align="center">
+  <strong>🖐️ Move. Gesture. Scroll. Experience touch-free interaction with AirScroll!</strong>
 </p>
 
 ---
 
 <p align="center">
-  Made with ❤️ using Python and Computer Vision.
+  Made with ❤️ by <a href="https://github.com/chinnikavya123"><strong>Chinni Kavya Sri</strong></a>
   <br />
-  ⭐ If you like AirScroll, consider giving this repository a star!
+  👩‍💻 Owner & Developer of AirScroll
 </p>
